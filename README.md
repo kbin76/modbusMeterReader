@@ -8,6 +8,11 @@ Currently only Eastron SDM630V2 energy meter is supported.
  - minimalmodbus (Python Module), "pip3 install minimalmodbus"
  - pyserial (Python Module, used by minimalmodbus), "pip3 install pyserial"
 
+## Hardware
+
+This is currently tested on a Raspberry Pi V2 using the "Zihatec RS422/RS845 Raspberry Pi Hat" that can be bought here: (https://www.hwhardsoft.de/)
+
+
 ## Example of usage
 
 ```
