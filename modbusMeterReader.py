@@ -16,6 +16,7 @@ argparser.add_argument( '-b', dest='baud', type=int, default=9600, help='Baudrat
 argparser.add_argument( '-s', dest='serialport', default='/dev/ttyAMA0', help='Serial device name (default /dev/ttyAMA0)')
 argparser.add_argument( '-a', dest='address', type=int, default=1, help='Address (RS-485 Node Address) of meter (default=1)')
 argparser.add_argument( '-t', dest='metertype', default="EASTRON_SDM630V2", help='Type of Energy meter (default=EASTRON_SDM630V2)')
+argparser.add_argument( '-v', dest='verbose', action='store_true', help="Verbose output")
 args = argparser.parse_args()
 
 minimalmodbus.BAUDRATE = args.baud
