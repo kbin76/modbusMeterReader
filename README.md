@@ -3,10 +3,14 @@ Python script for fetching readings from Energy Meters over Modbus protocol (run
 
 Currently only Eastron SDM630V2 energy meter is supported.
 
+Also includes bash script that publishes output from python script to MQTT server.
+
+
 ## Pre-requisites
 
  - minimalmodbus (Python Module), "pip3 install minimalmodbus"
  - pyserial (Python Module, used by minimalmodbus), "pip3 install pyserial"
+
 
 ## Hardware
 
@@ -51,6 +55,11 @@ pi@host1:~/modbusMeterReader $ ./modbusMeterReader.py | jq .
   "L2_MAX_A": 0,
   "L3_MAX_A": 0
 }
+
+
+pi@host1:~/modbusMeterReader $ ./modbusMeterReaderMQTT.sh --mqtt-hostname host2 --mqtt-topic 'energy/meter1' --metername 'meter1' -s /dev/ttyAMA0
+*** Success!
+
 ```
 
 
