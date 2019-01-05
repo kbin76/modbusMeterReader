@@ -54,3 +54,25 @@ pi@host1:~/modbusMeterReader $ ./modbusMeterReader.py | jq .
 ```
 
 
+
+## Command line arguments
+```
+usage: modbusMeterReader.py [-h] [--metername METERNAME] [--jsontype JSONTYPE]
+                            [-b BAUD] [-s SERIALPORT] [-a ADDRESS]
+                            [-t METERTYPE]
+
+Read data points from Electricity Meter via Modbus and output as JSON
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --metername METERNAME
+                        Name to give the meter in the JSON output attribute
+                        "meterName"
+  --jsontype JSONTYPE   Value to set "type" attribute to in the output JSON
+                        record
+  -b BAUD               Baudrate for RS-485 communication (default 9600)
+  -s SERIALPORT         Serial device name (default /dev/ttyAMA0)
+  -a ADDRESS            Address (RS-485 Node Address) of meter (default=1)
+  -t METERTYPE          Type of Energy meter (default=EASTRON_SDM630V2)
+
+```
