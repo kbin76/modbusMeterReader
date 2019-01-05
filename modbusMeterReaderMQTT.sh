@@ -10,7 +10,7 @@ READER_SCRIPT="./modbusMeterReader.py"
 
 if ! which mosquitto_pub > /dev/null
 then
-  echo "ERROR: This script requires the mosquitto_pub command to be present (on debian based systems, install with 'apt-get install mosquitto-clients')"
+  echo "ERROR: This script requires the mosquitto_pub command to be present (on debian based systems, install with 'sudo apt-get install mosquitto-clients')"
   exit 4
 fi
 
