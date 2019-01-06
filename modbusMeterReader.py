@@ -50,7 +50,7 @@ meter_database = {
 			{ 'modbus_addr': 0x34, 'name': 'Tot_W', 'description': "Total System Power (W)", 'type': 'float' },
 			{ 'modbus_addr': 0x38, 'name': 'Tot_VA', 'description': "Total System Volt Amps (VA)", 'type': 'float' },
 			{ 'modbus_addr': 0x0156, 'name': "Tot_kWh", 'description': "Total Energy (kWh)", 'type': 'float' },
-			{ 'modbus_addr': 0x46, 'name': 'LineFrequence_Hz', 'description': "Line frequency (Hz)", 'type': 'float' },
+			{ 'modbus_addr': 0x46, 'name': 'LineFrequency_Hz', 'description': "Line frequency (Hz)", 'type': 'float' },
 
 			{ 'modbus_addr': 0x48, 'name': 'EnergyImported_kWh', 'description': "Energy Imported Accumulated (kWh)", 'type': 'float' },
 			{ 'modbus_addr': 0x4A, 'name': 'EnergyExported_kWh', 'description': "Energy Exported Accumulated (kWh)", 'type': 'float' },
@@ -59,7 +59,7 @@ meter_database = {
 			{ 'modbus_addr': 0x0108, 'name': 'L1_MAX_A', 'description': "L1 Maximum Current (A)", 'type': 'float' },
 			{ 'modbus_addr': 0x010A, 'name': 'L2_MAX_A', 'description': "L2 Maximum Current (A)", 'type': 'float' },
 			{ 'modbus_addr': 0x010C, 'name': 'L3_MAX_A', 'description': "L3 Maximum Current (A)", 'type': 'float' }
-		]	
+		]
 	}
 }
 
