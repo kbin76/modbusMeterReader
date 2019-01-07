@@ -9,12 +9,15 @@ Also includes bash script that publishes output from python script to MQTT serve
 ## Pre-requisites
 
  - minimalmodbus (Python Module), "pip3 install minimalmodbus"
- - pyserial (Python Module, used by minimalmodbus), "pip3 install pyserial"
-
+	Library for low-level modbus communication
+ - pyserial (Python Module), "pip3 install pyserial"
+	Serial library, used by minimalmodmus library
 
 ## Hardware
 
-This is currently tested on a Raspberry Pi V2 using the "Zihatec RS422/RS845 Raspberry Pi Hat" that can be bought here: (https://www.hwhardsoft.de/)
+This is currently tested on a Raspberry Pi V2 using the "Zihatec RS422/RS845" Raspberry Pi Hat that facilitates
+the modbus electrical interfacing with one of the onboard UARTS on the pi. The hat can be bought here: 
+(https://www.hwhardsoft.de/)
 
 
 ## Example of usage
