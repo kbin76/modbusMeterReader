@@ -42,7 +42,7 @@ while (( $ARG_PTR < ${#ARGS[@]} )) ; do
       MQTT_PORT="${ARGS[$ARG_PTR]}"
       ARGS=( ${ARGS[@]:0:$ARG_PTR} ${ARGS[@]:$ARG_PTR+1} )
       ;;
-    --mqtt-user)
+    --mqtt-username)
       ARGS=( ${ARGS[@]:0:$ARG_PTR} ${ARGS[@]:$ARG_PTR+1} )
       MQTT_USERNAME="${ARGS[$ARG_PTR]}"
       ARGS=( ${ARGS[@]:0:$ARG_PTR} ${ARGS[@]:$ARG_PTR+1} )
@@ -109,8 +109,13 @@ then
 fi
 
 
-echo $READING | mosquitto_pub -s -h $MQTT_HOSTNAME -p $MQTT_PORT -t $MQTT_TOPIC #-u $MQTT_USERNAME -P "$MQTT_PASSWORD"
-MQTTPUB_EXITLEVEL=$?
+if [ "$MQTT_USERNAME" = "" ]; then
+  echo $READING | mosquitto_pub -s -h $MQTT_HOSTNAME -p $MQTT_PORT -t $MQTT_TOPIC
+  MQTTPUB_EXITLEVEL=$?
+else
+  echo $READING | mosquitto_pub -s -h $MQTT_HOSTNAME -p $MQTT_PORT -t $MQTT_TOPIC -u $MQTT_USERNAME -P "$MQTT_PASSWORD"
+  MQTTPUB_EXITLEVEL=$?
+fi
 
 if [[ $MQTTPUB_EXITLEVEL != 0 ]]; then
   echo "!!! mosquitto_pub failed"
